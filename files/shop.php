@@ -4,7 +4,7 @@ include 'includes/head-vars.php';
 include 'includes/navbar.php';
 
 
-$id = $_GET['id']??0; 
+$id = $_GET['id']??0; //CATEGORY ID
 $range = $_GET['range']??0; 
 ?>
  
@@ -462,25 +462,9 @@ $range = $_GET['range']??0;
                     <?php
                      
 
-                    //  switch ($favcolor) {
-                    //     case "red":
-                    //       echo "Your favorite color is red!";
-                    //       break;
-                    //     case "blue":
-                    //       echo "Your favorite color is blue!";
-                    //       break;
-                    //     case "green":
-                    //       echo "Your favorite color is green!";
-                    //       break;
-                    //     default:
-                    //       echo "Your favorite color is neither red, blue, nor green!";
-                    //   }
-
                      $sql;
                    
 
-
-                    
                         if($id == 0 && $range == 0 ){
                             $sql = "SELECT * FROM products";
     
@@ -517,7 +501,7 @@ $range = $_GET['range']??0;
                             $product_discount=$row['product_discount'];
                             $category_id=$row['category_id'];
 
-                    $fil="sales";
+                            
                             
                     ?>
 

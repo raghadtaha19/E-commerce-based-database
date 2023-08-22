@@ -176,6 +176,7 @@ if (in_array($id, $existingProductIds)) {
                             $total = $totalPrice;
                         }
                         $_SESSION['total'] = $total;  ?>
+                        <th>total</th>
                         <td><strong><span class="amount">
                                     <?php echo $total ?>
                                 </span></strong></td>

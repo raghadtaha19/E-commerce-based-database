@@ -31,7 +31,7 @@ include_once 'includes/navbar.php';
         <div class="row learts-mb-n40">
 
             <?php
-            $id = $_GET['id']??1;
+            $id = $_GET['id']??1;//product id
 
             $sql = "SELECT products.product_id ,products.product_name,products.product_description,products.product_price,products.product_image,products.product_discount
             ,products.category_id,categories.category_name
@@ -109,16 +109,7 @@ include_once 'includes/navbar.php';
             <!-- Product Summery Start -->
             <div class="col-lg-6 col-12 learts-mb-40">
                 <div class="product-summery">
-                    <!-- <div class="product-nav">
-                        <a href="#"><i class="fas fa-long-arrow-alt-left"></i></a>
-                        <a href="#"><i class="fas fa-long-arrow-alt-right"></i></a>
-                    </div> -->
-                    <!-- <div class="product-ratings">
-                        <span class="star-rating">
-                            <span class="rating-active" style="width: 100%;">ratings</span>
-                        </span>
-                        <a href="#reviews" class="review-link">(<span class="count">3</span> customer reviews)</a>
-                    </div> -->
+                  
                     <h3 class="product-title">
                         <?php echo $product_name ?>
                     </h3>
@@ -130,23 +121,7 @@ include_once 'includes/navbar.php';
                             <?php echo $product_description ?>
                         </p>
                     </div>
-                    <!-- <div class="product-variations">
-                        <table>
-                            <tbody>
-
-                                <tr>
-                                    <td class="label"><span>Quantity</span></td>
-                                    <td class="value">
-                                        <div class="product-quantity">
-                                            <span class="qty-btn minus"><i class="ti-minus"></i></span>
-                                            <input type="text" class="input-qty" value="1">
-                                            <span class="qty-btn plus"><i class="ti-plus"></i></span>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div> -->
+                   
                     <div class="product-buttons">
                         <a href="wishlistupdate.php?product_id=<?php echo $id ?>" class="btn btn-icon btn-outline-body btn-hover-dark hintT-top"
                             data-hint="Add to Wishlist"><i class="far fa-heart"></i></a>
@@ -283,6 +258,7 @@ include_once 'includes/navbar.php';
 
 
         ?>
+
         <?php if(isset($_SESSION['loggedInStatus']) && $_SESSION['loggedInStatus'] == true){
             $loggedInName = $_SESSION['loggedInUserData']['name'];
             $loggedInEmail = $_SESSION['loggedInUserData']['email'];
@@ -675,7 +651,7 @@ include 'includes/scripts.php';
 ?>
 
 <?php
-// $count=0;
+
 
 if (isset($_POST['submit'])) {
 
