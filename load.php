@@ -1,5 +1,7 @@
 <?php 
 
+
+
 if(isset($_GET['minusid'])){
     $id=$_GET['minusid'];
     session_start();

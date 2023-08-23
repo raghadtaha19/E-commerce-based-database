@@ -4,7 +4,7 @@ include 'includes/head-vars.php';
 include 'includes/navbar.php';
 
 
-$id = $_GET['id']??0; //CATEGORY ID
+$id = $_GET['id']??0; 
 $range = $_GET['range']??0; 
 ?>
  
@@ -316,10 +316,10 @@ $range = $_GET['range']??0;
                         <a href="my-account.html"><i class="far fa-user"></i></a>
                     </div>
                     <div class="header-wishlist">
-                        <a href="wishlist.html"><span>3</span><i class="far fa-heart"></i></a>
+                        <a href="wishlist.html"><span></span><i class="far fa-heart"></i></a>
                     </div>
                     <div class="header-cart">
-                        <a href="shopping-cart.html"><span class="cart-count">3</span><i class="fas fa-shopping-cart"></i></a>
+                        <a href="shopping-cart.html"><span class="cart-count"></span><i class="fas fa-shopping-cart"></i></a>
                     </div>
                 </div>
             </div>
@@ -462,9 +462,25 @@ $range = $_GET['range']??0;
                     <?php
                      
 
+                    //  switch ($favcolor) {
+                    //     case "red":
+                    //       echo "Your favorite color is red!";
+                    //       break;
+                    //     case "blue":
+                    //       echo "Your favorite color is blue!";
+                    //       break;
+                    //     case "green":
+                    //       echo "Your favorite color is green!";
+                    //       break;
+                    //     default:
+                    //       echo "Your favorite color is neither red, blue, nor green!";
+                    //   }
+
                      $sql;
                    
 
+
+                    
                         if($id == 0 && $range == 0 ){
                             $sql = "SELECT * FROM products";
     
@@ -501,7 +517,7 @@ $range = $_GET['range']??0;
                             $product_discount=$row['product_discount'];
                             $category_id=$row['category_id'];
 
-                            
+                    $fil="sales";
                             
                     ?>
 
